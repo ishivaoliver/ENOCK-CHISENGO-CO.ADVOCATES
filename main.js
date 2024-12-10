@@ -28,36 +28,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// Typing Animation
-const typedTextElement = document.getElementById('typed-output');
-const textArray = ["Empowering Your Business", "Ensuring Justice for All", "Committed to Legal Excellence"];
-let textIndex = 0;
-let charIndex = 0;
-let currentText = "";
-let typingSpeed = 100; // Speed of typing effect
+document.addEventListener("DOMContentLoaded", () => {
+    const animatedTexts = document.querySelectorAll(".animated-text");
 
-function typeText() {
-    if (charIndex < textArray[textIndex].length) {
-        currentText += textArray[textIndex].charAt(charIndex);
-        typedTextElement.textContent = currentText;
-        charIndex++;
-        setTimeout(typeText, typingSpeed);
-    } else {
-        setTimeout(deleteText, 1500); // Pause before deleting
+    // Function to create typing effect
+    const typeEffect = (element, text, speed = 100) => {
+        element.textContent = ""; // Clear current content
+        let index = 0;
+
+        const type = () => {
+            if (index < text.length) {
+                element.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, speed);
+            }
+        };
+
+        type();
+    };
+
+    // Initialize typing animation for the active slide
+    const initTypingEffect = () => {
+        const activeItem = document.querySelector(".carousel-item.active .animated-text");
+        if (activeItem) {
+            const text = activeItem.getAttribute("data-text") || activeItem.textContent.trim();
+            typeEffect(activeItem, text);
+        }
+    };
+
+    // Attach event listener to update typing effect on slide change
+    const carousel = document.getElementById("heroCarousel");
+    if (carousel) {
+        carousel.addEventListener("slid.bs.carousel", initTypingEffect);
     }
-}
 
-function deleteText() {
-    if (charIndex > 0) {
-        currentText = currentText.substring(0, currentText.length - 1);
-        typedTextElement.textContent = currentText;
-        charIndex--;
-        setTimeout(deleteText, typingSpeed / 2);
-    } else {
-        textIndex = (textIndex + 1) % textArray.length; // Move to the next text
-        setTimeout(typeText, 500); // Start typing new text
-    }
-}
-
-// Start typing the first sentence
-typeText();
+    // Start the typing effect on page load
+    initTypingEffect();
+});
