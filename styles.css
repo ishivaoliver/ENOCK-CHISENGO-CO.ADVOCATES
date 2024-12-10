@@ -1,0 +1,161 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+/* Dropdown */
+.nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdown-item {
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Responsive Navbar */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.btn-warning {
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.btn-warning:hover {
+    background-color: #ffc107;
+    color: #000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General Styles */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    height: 100vh; /* Ensures the hero section takes up the full height of the screen */
+    background-repeat: no-repeat;
+}
+
+.carousel-item {
+    height: 100vh; /* Ensures each carousel item takes up the full height of the viewport */
+}
+
+.carousel-item img {
+    width: 100%;          /* Ensures the image stretches to fill the container's width */
+    height: 100%;         /* Ensures the image fills the container's height */
+    object-fit: cover;    /* Ensures the image covers the area of the container while maintaining its aspect ratio */
+    object-position: center; /* Ensures the image stays centered, preventing unwanted cropping */
+}
+
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.7), 0 0 30px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+.carousel-caption h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+}
+
+.text-shadow {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.typed-text-container {
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#typed-output {
+    display: inline-block;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
