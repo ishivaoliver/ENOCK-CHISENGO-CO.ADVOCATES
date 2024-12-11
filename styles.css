@@ -75,7 +75,7 @@ body {
 
 
 /* General Styles for Hero Section */
-section {
+.hero {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -97,14 +97,30 @@ section {
     left: 10%;
     right: 10%;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .animated-text {
     font-size: 3rem;
     font-weight: bold;
     animation: fadeIn 2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: scale(1.05);
 }
 
 .btn-group .btn {
@@ -140,9 +156,379 @@ section {
 }
 
 
+/* About Section Styling */
+.about-section {
+    position: relative;
+    background-color: #f8f9fa;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+.about-section .section-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-section .section-subheading {
+    font-size: 1.2rem;
+    color: #6c757d;
+    margin-bottom: 40px;
+}
+
+.about-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    color: #555;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.about-list li {
+    margin-bottom: 12px;
+}
+
+#call-us-btn {
+    margin-top: 50px;
+    padding: 15px 40px;
+    font-size: 1.4rem;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#call-us-btn:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design for Maximized Layout */
+@media (max-width: 768px) {
+    .about-section .section-heading {
+        font-size: 2.5rem;
+    }
+
+    .about-section .section-subheading {
+        font-size: 1.1rem;
+    }
+
+    .about-list {
+        font-size: 1rem;
+    }
+
+    #call-us-btn {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section .section-heading {
+        font-size: 2rem;
+    }
+
+    .about-section .section-subheading {
+        font-size: 1rem;
+    }
+
+    .about-list {
+        font-size: 0.95rem;
+    }
+
+    #call-us-btn {
+        font-size: 1rem;
+    }
+}
+
+
+
+#practice-areas {
+    background-color: #ffffff;
+    border-top: 5px solid #007bff;
+}
+
+h2 {
+    color: #007bff;
+}
+
+.practice-area-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-area-card h4 {
+    color: #333;
+}
+
+.practice-area-card p {
+    color: #666;
+}
+
+.practice-area-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 767px) {
+    .practice-area-card {
+        margin-bottom: 20px;
+    }
+}
+
+
+.contact-us {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.contact-us h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-us .form-control {
+    margin-bottom: 15px;
+}
+
+.contact-us button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+/* Overall Section */
+#team {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+/* Heading and Paragraph */
+#team h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+#team p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Card Styling */
+.team-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.team-member-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card-text {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Hover Effect on Card */
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Button */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border-radius: 25px;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    font-size: 1.3rem;
+}
+
+.social-icon:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Social Media Icon Specific Colors */
+.fb-icon {
+    background-color: #3b5998;
+}
+
+.li-icon {
+    background-color: #0077b5;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .team-card {
+        margin-bottom: 30px;
+    }
+    
+    .social-icons {
+        margin-top: 15px;
+    }
+}
+
+
+
+/* Client Portfolio Section */
+#client-portfolio {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+#client-portfolio .card {
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#client-portfolio .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#client-portfolio .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+#client-portfolio .card-body {
+    padding: 20px;
+}
+
+#client-portfolio .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s;
+}
+
+#client-portfolio .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Branch Highlights Section */
+#branches {
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+
+#branches .branch-card {
+    background-color: #f1f1f1;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#branches .branch-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+#branches .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+    transition: background-color 0.3s;
+}
+
+#branches .btn-info:hover {
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+@media (max-width: 768px) {
+    #client-portfolio .card-body {
+        padding: 15px;
+    }
+
+    #branches .branch-card {
+        padding: 20px;
+    }
+}
+
+
+
+
 
 /* Footer */
 footer {
-    font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
 }
+
+footer h5 {
+    color: #007bff;
+}
+
+footer p {
+    color: #ccc;
+}
+
+footer .btn-social {
+    margin: 5px;
+    color: white;
+    background-color: #007bff;
+    border-radius: 20px;
+    padding: 8px 20px;
+}
+
+footer .btn-social:hover {
+    background-color: #0056b3;
+}
+
