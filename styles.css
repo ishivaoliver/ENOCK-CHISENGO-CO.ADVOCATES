@@ -1,4 +1,4 @@
-
+/* Generall sytling  */
 *::before,
 *::after {
     margin: 0;
@@ -10,68 +10,174 @@ body{
     font-family: 'Courier New', Courier, monospace;
     overflow-x: hidden;
 }
-.navbar-brand span{
+
+/* General styles for the navigation bar */
+
+/* Logo dimensions */
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+/* Navbar brand title styling */
+.brand-title {
+    font-size: 1.2rem; /* Default size for small devices */
+    font-weight: bold;
     color: #aa9166;
 }
-.btn{
+
+/* Button styling */
+.appointment-btn {
     color: #ffffff;
     border: 2px solid #aa9166;
     border-radius: 0;
-    background-color: #212529;;
+    background-color: #212529;
+    padding: 5px 15px;
+    font-weight: bold;
 }
-.btn:hover {
+
+.appointment-btn:hover {
     background-color: #aa9166;
     color: #ffffff;
 }
-.nav-link{
+
+/* Navigation link styling */
+.nav-link {
     color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
-.nav-link{
-    color: #ffffff;
-    font-weight: bolder;
-    transition: 0.5s;
-}
-.nav-link:hover{
+
+.nav-link:hover {
     color: #aa9166;
 }
-.carousel-caption{
-    margin-bottom: 10rem;
-    z-index: 2;
+
+/* Responsive font sizes for brand title */
+@media (max-width: 768px) {
+    .brand-title {
+        font-size: 1rem;
+    }
+
+    .logo {
+        height: 35px; /* Adjust logo size for smaller devices */
+    }
 }
-.carousel-inner::before{
+
+@media (min-width: 992px) {
+    .brand-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Additional media query for Galaxy Z Fold */
+@media (max-width: 280px) {
+    .brand-title {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    .appointment-btn {
+        padding: 3px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+.carousel-caption {
+    margin-bottom: 5rem; /* Reduce bottom margin */
+    z-index: 2;
+    text-align: center; /* Center-align the caption text */
+}
+
+/* Optional: Apply a background overlay for readability */
+.carousel-inner::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    /* background: rgba(0, 0, 0, 0.7);/ */
-    z-index: 1
+    background: rgba(0, 0, 0, 0.7); /* Ensure text is readable */
+    z-index: 1;
 }
+
 .carousel-item {
     background-image: linear-gradient(to bottom, rgba(53,55, 78, 0.52), rgba(59, 53, 59, 0.73)), url(img/about.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    position: relative; /* Ensure content stays in place */
 }
-.feature{
-    margin-top: 150px;
+
+.feature-top {
+    margin-top: 50px; /* Reduce the top margin */
 }
-.feature-top .feature-item i {
-    color: #aa9166;
-    font-size: 35px;
-    margin-bottom: 10px;
+
+/* Ensure the "Get Free Consultation" button is prominent */
+.carousel-caption a {
+    font-weight: bold;
+    font-size: 1.25rem; /* Adjust button font size for smaller screens */
 }
-.feature-top .feature-item p {
-    color: #999999;
-    margin: 0;
-    font-size: 18px;
+
+.feature-item {
+    text-align: center; /* Ensure text is centered inside feature items */
 }
-.feature-top .feature-item h3 {
-    color: #ffffff;
-    font-size: 30px;
-    font-weight: 600;
+
+@media (max-width: 767px) {
+    /* For smaller screens like the Galaxy Z Fold */
+    .carousel-caption h1 {
+        font-size: 2.5rem; /* Adjust headline size */
+    }
+
+    .carousel-caption p {
+        font-size: 1rem; /* Reduce paragraph font size */
+    }
+
+    .carousel-item {
+        height: 75vh; /* Reduce carousel height on smaller screens */
+    }
+
+    .feature-item {
+        margin-bottom: 20px; /* Add space between feature items */
+    }
+
+    .feature-item i {
+        font-size: 2rem; /* Increase icon size on small screens */
+    }
+
+    .feature-item h3 {
+        font-size: 1.5rem; /* Reduce the title size */
+    }
+
+    .feature-item p {
+        font-size: 1rem; /* Reduce the paragraph size */
+    }
+
+    .carousel-inner {
+        padding-top: 20px; /* Adjust the padding for carousel items */
+    }
+
+    .carousel-caption a {
+        font-size: 1.125rem; /* Adjust the button size for smaller screens */
+        padding: 15px 30px; /* Adjust button padding */
+    }
 }
+
+@media (max-width: 480px) {
+    .carousel-caption h1 {
+        font-size: 1.75rem; /* Make the headline even smaller */
+    }
+
+    .carousel-caption p {
+        font-size: 0.875rem; /* Further reduce paragraph text size */
+    }
+}
+
 .section-head {
     position: relative;
     width: 100%;

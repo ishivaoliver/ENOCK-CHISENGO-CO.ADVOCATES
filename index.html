@@ -1,45 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chisengo & Co.Adocates</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    <!-- Character Encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Viewport Settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <title>Chisengo & Co. Advocates | [Add Location or Key Services]</title>
+    <meta name="description" content="[Add a concise description of your law firm, services, and unique value proposition, e.g., 'Chisengo & Co. Advocates specializes in corporate law, property law, and litigation in [Location].']">
+    <meta name="keywords" content="[corporate law, property law, litigation, legal services, Chisengo & Co. Advocates, law firm in [Location]]">
+    <meta name="author" content="Chisengo & Co. Advocates">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/Logo .jpeg" type="image/x-icon">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Chisengo & Co. Advocates">
+    <meta property="og:description" content="[Same description as meta description, tailored for social media previews.]">
+    <meta property="og:image" content="/path/to/preview-image.jpg">
+    <meta property="og:url" content="[Website URL]">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- JavaScript (deferred for performance) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+    <!-- Additional Plugins/Features -->
+    <!-- Example: Live Chat Integration -->
+    <!-- <script src="/path/to/live-chat.js" defer></script> -->
 </head>
 
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark navbar-fixed-top">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#intro">
-                <span class="fw-bold display-3">Chisengo&Co</span>
+            <!-- Brand logo and title -->
+            <a class="navbar-brand d-flex align-items-center" href="#intro">
+                <img src="img/Logo .jpeg" alt="Chisengo & Co. Logo" class="me-2 logo">
+                <span class="brand-title">CHISENGO&CO.ADVOCATES</span>
             </a>
+
+            <!-- Toggle button for small screens -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Collapsible menu links -->
             <div class="collapse navbar-collapse justify-content-end align-center" id="navbarNav">
-                <ul class="navbar-nav mt-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#attorney">Our Team </a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                <ul class="navbar-nav">
+                    <!-- Navigation links -->
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#attorney">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <!-- CTA Button -->
                     <li class="nav-item ms-2 d-none d-md-inline">
-                        <a class="btn" href="#">Get Appiontment</a>
+                        <a class="btn appointment-btn" href="#appointment">Get Appointment</a>
                     </li>
                 </ul>
             </div>
@@ -49,17 +86,17 @@
     <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <!-- <img src="img/carousel-1.jpg" class="d-block w-100 mt-5" alt="..."> -->
+                <img src="img/carousel-1.jpg" class="d-block w-100 mt-5" alt="...">
                 <div class="carousel-caption">
                     <h1 class="display-1">We Fight For Your Justice</h1>
                     <p class="fw-light fs-4">When it comes to what is fair, everyone is owed basic things.
                         Access to food, shelter, and clean water are the big three.
                     </p>
-                    <a class="btn fs-5 px-4 py-3" href="#">Get free consultation </a>
+                    <a class="btn fs-5 px-4 py-3" href="#">Get Appointment </a>
                 </div>
             </div>
             <div class="carousel-item carousel2">
-                <!-- <img src="img/carousel-2.jpg" class="d-block w-100 mt-5" alt="..."> -->
+                <img src="img/carousel-2.jpg" class="d-block w-100 mt-5" alt="...">
                 <div class="carousel-caption">
                     <h1 class="display-1">We fight to oppose for you</h1>
                     <p class="fw-light fs-4"> A man of many companions may come to ruin,
@@ -69,7 +106,7 @@
                 </div>
             </div>
             <div class="carousel-item carousel3">
-                <!-- <img src="img/carousel-3.jpg" class="d-block w-100 mt-5" alt="..."> -->
+                <img src="img/carousel-3.jpg" class="d-block w-100 mt-5" alt="...">
                 <div class="carousel-caption">
                     <h1 class="display-1">We fight for your privilege</h1>
                     <p class="fw-light fs-4"> Everyone has some kind of privilege or intrinsic advantage over others.
@@ -144,11 +181,11 @@
                             experience in corporate commercial transactions and dispute resolution.
                         </p>
                         <p>
-                            Kanun Law Firm leverages its skilled workforce and technology to provide premium legal
+                            Chisengo and Co.advocates leverages its skilled workforce and technology to provide premium legal
                             services.
                             With a seamless blend of industry-recognised partners, consultants and other lawyers,
                             operating from three offices<br>
-                            spanning 3 key commercial centres of Lagos, Abuja and Port-Harcourt, Nigeria,
+                            spanning 3 key commercial centres of Nairobi , Kakamega and Nakuru, Kenya,
                         </p>
                         <a class="btn fw-bolder display-5 px-5 py-3" href="">Learn More</a>
                     </div>
@@ -175,7 +212,7 @@
                             <i class="bi bi-house-check bg-dark px-3"></i>
                         </div>
                         <div class="card-body bg-dark">
-                            <h5 class="card-title">Civil Law</h5>
+                            <h5 class="card-title">Insurance</h5>
                             <p class="card-text">
                                 the system of law concerned with private relations between members of a community rather
                                 than criminal,
@@ -333,12 +370,12 @@
     <div class="team" id="attorney">
         <div class="container">
             <div class="section-head">
-                <h2>Meet Our Expert Attorneys</h2>
+                <h2>Our team </h2>
             </div>
             <div class="row p">
                 <div class="col-lg-3 col-md-6">
                     <div class="card">
-                        <img src="img/team-1.jpg" class="card-img-top" alt="...">
+                        <!-- <img src="img/team-1.jpg" class="card-img-top" alt="..."> -->
                         <div class="social-body bg-dark">
                             <div class="team-text mt-5">
                                 <h5 class="card-title">Mr.Enock Chisengo</h5>
@@ -356,7 +393,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="card">
-                        <img src="img/team-2.jpg" class="card-img-top" alt="...">
+                        <!-- <img src="img/team-2.jpg" class="card-img-top" alt="..."> -->
                         <div class="social-body bg-dark">
                             <div class="team-text mt-5">
                                 <h5 class="card-title">Mr.Emmanuel Wanyonyi</h5>
@@ -373,7 +410,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="card">
-                        <img src="img/team-3.jpg" class="card-img-top" alt="...">
+                        <!-- <img src="img/team-3.jpg" class="card-img-top" alt="..."> -->
                         <div class="social-body bg-dark">
                             <div class="team-text mt-5">
                                 <h5 class="card-title">Mrs.Beverly Saisi</h5>
@@ -390,7 +427,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="card">
-                        <img src="img/team-4.jpg" class="card-img-top " alt="...">
+                        <!-- <img src="img/team-4.jpg" class="card-img-top " alt="..."> -->
                         <div class="social-body bg-dark">
                             <div class="team-text mt-5">
                                 <h5 class="card-title">Ms. Purity Kamonya</h5>
@@ -453,7 +490,7 @@
                                     data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                                     aria-controls="collapseTwo">
                                     <strong class="bg-black fs-3">2</strong> <span
-                                        class="fs-4 fw-bolder fst-italic text-black">Kanun Law Firm Tax Practice
+                                        class="fs-4 fw-bolder fst-italic text-black">Chisengo and co advocates  Tax Practice
                                         Profile</span>
                                 </button>
                             </h2>
@@ -632,11 +669,11 @@
                     <div class="footer-about">
                         <h2>About Us</h2>
                         <p>
-                            Kanun Law Firm leverages its skilled workforce and technology to provide premium legal
+                            Chisengo and Co.Avocates  leverages its skilled workforce and technology to provide premium legal
                             services.
                             With a seamless blend of industry-recognised partners, consultants and other lawyers,
                             operating from three offices
-                            spanning 3 key commercial centres of Lagos, Abuja and Port-Harcourt, Nigeria,
+                            spanning 3 key commercial centres of Nairobi , Nakuru and kakamega, Kenya,
                         </p>
                     </div>
                 </div>
@@ -645,11 +682,12 @@
                         <div class="col-md-6 col-lg-4">
                             <div class="footer-link">
                                 <h2>Services Areas</h2>
-                                <div class="link"><a href="">Civil Law</a></div>
-                                <div class="link"><a href="">Family Law</a></div>
-                                <div class="link"><a href="">Business Law</a></div>
-                                <div class="link"><a href="">Education Law</a></div>
-                                <div class="link"><a href="">Immigration Law</a></div>
+                                <div class="link"><a href="">Insurance </a></div>
+                                <div class="link"><a href="">Litigation </a></div>
+                                <div class="link"><a href="">Aviation,cariage by sea & maritime law </a></div>
+                                <div class="link"><a href="">Commercial law </a></div>
+                                <div class="link"><a href="">Environmental law </a></div>
+                                <div class="link"><a href="">intellectual property </a></div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
@@ -665,9 +703,9 @@
                         <div class="col-md-6 col-lg-4">
                             <div class="footer-contact">
                                 <h2>Get In Touch</h2>
-                                <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
-                                <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                                <p><i class="fa fa-envelope"></i>info@example.com</p>
+                                <p><i class="fa fa-map-marker-alt"></i>Krishna centre 6th floor,Suite 618 Woodvale Groove Westlands</p>
+                                <p><i class="fa fa-phone-alt"></i>0720132206</p>
+                                <p><i class="fa fa-envelope"></i>echisengoadvocates@gmail.com</p>
                                 <div class="footer-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -708,6 +746,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>
