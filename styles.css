@@ -889,11 +889,10 @@ img.img-fluid {
     display: flex;
     justify-content: space-between;
 }
-
 .newsletter {
     position: relative;
     max-width: 900px;
-    margin: 50px auto -140px auto;
+    margin: 30px auto 50px auto;  /* Adjusted margin values */
     padding: 30px 10px;
     background: #aa9166;
     z-index: 1;
@@ -940,83 +939,116 @@ img.img-fluid {
 }
 
 
-
+ /* footer section */
 .footer {
-    background: #212529;
-}
-
-.lau {
-    padding-top: 200px;
-}
-
-.footer-about h2 {
-    color: #aa9166;
-}
-
-.footer-about p {
+    background-color: #212529;
+    padding: 60px 0;
     color: #999999;
 }
 
-.footer-link h2 {
+.footer h2 {
     color: #aa9166;
+    margin-bottom: 20px;
 }
 
-.footer-link a {
-    text-decoration: none;
+.footer p {
+    color: #999999;
 }
 
-.footer-menu {
-    background: black;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 40px;
-}
-
-.f-menu {
-    position: relative;
-    text-align: center;
-    padding: 8px 0;
-}
-
-.f-menu a {
+.footer a {
     text-decoration: none;
     color: #999999;
-    font-size: 16px;
-    margin-right: 15px;
-    padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .3);
 }
 
-.link a {
-    color: #999999;
-    font-size: 16px;
-}
-
-.link a:hover {
+.footer a:hover {
     color: #aa9166;
 }
 
-.cop {
-    color: #999999;
+.footer-about, .footer-link, .footer-contact {
+    margin-bottom: 30px;
 }
 
-.cop span {
-    color: #aa9166;
+.footer-link ul {
+    list-style: none;
+    padding: 0;
 }
 
-.footer-contact h2 {
-    color: #aa9166;
+.footer-link li {
+    margin-bottom: 10px;
 }
 
 .footer-contact p {
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    margin-right: 15px;
+    font-size: 20px;
     color: #999999;
 }
 
-.copyright {
-    padding: 30px 15px;
+.footer-social a:hover {
+    color: #aa9166;
 }
 
-.copy {
+.footer-map iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+
+.footer-bottom {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.footer-menu {
+    text-align: center;
+}
+
+.footer-menu a {
+    color: #999999;
+    margin-right: 15px;
+    font-size: 16px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-menu a:last-child {
+    border-right: none;
+}
+
+.copyright {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.copyright p {
+    color: #999999;
+}
+
+.copyright span {
+    color: #aa9166;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .footer-about, .footer-link, .footer-contact {
+        text-align: center;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-menu {
+        margin-top: 20px;
+    }
+
+    .footer-social a {
+        margin-right: 10px;
+    }
 }
