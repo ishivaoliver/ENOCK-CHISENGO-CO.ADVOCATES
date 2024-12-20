@@ -1,32 +1,63 @@
 /* Generall sytling  */
-*::before,
-*::after {
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Courier New', Courier, monospace;
     overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
 }
+
 
 /* General styles for the navigation bar */
 
+
 /* Logo dimensions */
+
 .logo {
     height: 40px;
     width: auto;
 }
 
+.navbar {
+    flex-wrap: wrap;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+}
+
+.navbar-toggler {
+    margin: 0.5rem;
+}
+
+.navbar-nav {
+    margin: auto;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+
 /* Navbar brand title styling */
+
 .brand-title {
-    font-size: 1.2rem; /* Default size for small devices */
+    font-size: 1.2rem;
+    /* Default size for small devices */
     font-weight: bold;
     color: #aa9166;
 }
 
+
 /* Button styling */
+
 .appointment-btn {
     color: #ffffff;
     border: 2px solid #aa9166;
@@ -41,7 +72,9 @@ body{
     color: #ffffff;
 }
 
+
 /* Navigation link styling */
+
 .nav-link {
     color: #ffffff;
     font-weight: bold;
@@ -52,14 +85,16 @@ body{
     color: #aa9166;
 }
 
+
 /* Responsive font sizes for brand title */
+
 @media (max-width: 768px) {
     .brand-title {
         font-size: 1rem;
     }
-
     .logo {
-        height: 35px; /* Adjust logo size for smaller devices */
+        height: 35px;
+        /* Adjust logo size for smaller devices */
     }
 }
 
@@ -69,32 +104,33 @@ body{
     }
 }
 
+
 /* Additional media query for Galaxy Z Fold */
+
 @media (max-width: 280px) {
     .brand-title {
         font-size: 0.9rem;
     }
-
     .logo {
         height: 30px;
     }
-
     .appointment-btn {
         padding: 3px 10px;
         font-size: 0.8rem;
     }
 }
 
-
-
-
 .carousel-caption {
-    margin-bottom: 5rem; /* Reduce bottom margin */
+    margin-bottom: 3rem;
+    /* Reduce bottom margin */
     z-index: 2;
-    text-align: center; /* Center-align the caption text */
+    text-align: center;
+    /* Center-align the caption text */
 }
 
+
 /* Optional: Apply a background overlay for readability */
+
 .carousel-inner::before {
     content: "";
     position: absolute;
@@ -102,79 +138,75 @@ body{
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.7); /* Ensure text is readable */
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
 .carousel-item {
-    background-image: linear-gradient(to bottom, rgba(53,55, 78, 0.52), rgba(59, 53, 59, 0.73)), url(img/about.jpg);
+    background-image: linear-gradient(to bottom, rgba(53, 55, 78, 0.52), rgba(59, 53, 59, 0.73)), url(img/about.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    position: relative; /* Ensure content stays in place */
+    position: relative;
+    /* Ensure content stays in place */
 }
 
 .feature-top {
-    margin-top: 50px; /* Reduce the top margin */
+    margin-top: 50px;
+    /* Reduce the top margin */
 }
 
+
 /* Ensure the "Get Free Consultation" button is prominent */
+
 .carousel-caption a {
     font-weight: bold;
-    font-size: 1.25rem; /* Adjust button font size for smaller screens */
+    font-size: 1.25rem;
+    /* Adjust button font size for smaller screens */
 }
 
 .feature-item {
-    text-align: center; /* Ensure text is centered inside feature items */
+    text-align: center;
+    /* Ensure text is centered inside feature items */
 }
 
 @media (max-width: 767px) {
-    /* For smaller screens like the Galaxy Z Fold */
     .carousel-caption h1 {
-        font-size: 2.5rem; /* Adjust headline size */
+        font-size: 2.5rem;
     }
-
     .carousel-caption p {
-        font-size: 1rem; /* Reduce paragraph font size */
+        font-size: 1rem;
     }
-
     .carousel-item {
-        height: 75vh; /* Reduce carousel height on smaller screens */
+        height: 75vh;
     }
-
     .feature-item {
-        margin-bottom: 20px; /* Add space between feature items */
+        margin-bottom: 20px;
     }
-
     .feature-item i {
-        font-size: 2rem; /* Increase icon size on small screens */
+        font-size: 2rem;
     }
-
     .feature-item h3 {
-        font-size: 1.5rem; /* Reduce the title size */
+        font-size: 1.5rem;
     }
-
     .feature-item p {
-        font-size: 1rem; /* Reduce the paragraph size */
+        font-size: 1rem;
     }
-
     .carousel-inner {
-        padding-top: 20px; /* Adjust the padding for carousel items */
+        padding-top: 20px;
     }
-
     .carousel-caption a {
-        font-size: 1.125rem; /* Adjust the button size for smaller screens */
-        padding: 15px 30px; /* Adjust button padding */
+        font-size: 1.125rem;
+        padding: 15px 30px;
     }
 }
 
 @media (max-width: 480px) {
     .carousel-caption h1 {
-        font-size: 1.75rem; /* Make the headline even smaller */
+        font-size: 1.75rem;
     }
-
     .carousel-caption p {
-        font-size: 0.875rem; /* Further reduce paragraph text size */
+        font-size: 0.875rem;
     }
 }
 
@@ -183,13 +215,14 @@ body{
     width: 100%;
     text-align: center;
     margin-bottom: 45px;
-    text-decoration: 2px line-through #aa9166;
 }
-.service-icon i{
+
+.service-icon i {
     font-size: 60px;
     color: #aa9166;
     margin-left: 100px;
 }
+
 .card-body h5 {
     padding: 5px;
     font-size: 30px;
@@ -203,25 +236,29 @@ body{
     font-size: 18px;
     text-align: center;
 }
-.card-body a{
+
+.card-body a {
     margin-left: 130px;
 }
-.feature-icon i{
+
+.feature-icon i {
     font-size: 60px;
     color: #aa9166;
     margin-left: 93px;
     height: 290px;
 }
+
 .feature .feature-item p {
     margin: 0;
     font-size: 20px;
     font-weight: 500;
 }
 
-.team{
+.team {
     margin-top: 150px;
 }
-.team-social{
+
+.team-social {
     position: absolute;
     width: calc(100% - 60px);
     height: 50px;
@@ -233,12 +270,15 @@ body{
     background: #aa9166;
     gap: 1rem;
 }
-.team-social a{
+
+.team-social a {
     font-size: 20px;
 }
-.team-social a i:hover{
+
+.team-social a i:hover {
     color: #ffffff;
 }
+
 .social-body h5 {
     padding: 5px;
     font-size: 30px;
@@ -263,59 +303,66 @@ body{
     color: #aa9166;
     font-weight: 700;
 }
-.card-body a{
+
+.card-body a {
     color: #aa9166;
 }
+
 @media screen and (max-width: 1024px) {
     .carousel-caption {
         margin-bottom: 0;
     }
-    
 }
 
-.header img{
+.header img {
     width: 90px;
     height: 90px;
     margin-right: 1em;
 }
-.dea h4{
+
+.dea h4 {
     color: #aa9166;
 }
-.dea p{
+
+.dea p {
     color: #999999;
 }
 
-.blog{
+.blog {
     margin-top: 100px;
 }
 
-.meta{
+.meta {
     display: flex;
     gap: 2rem;
 }
 
-.owl-stage-outer{
+.owl-stage-outer {
     width: 360px;
 }
-.owl-image{
+
+.owl-image {
     width: 360px;
 }
-.section-btn{
+
+.section-btn {
     text-decoration: none;
     color: #aa9166;
     transition: .1s;
     text-transform: uppercase;
     font-weight: bolder;
 }
-.section-btn:hover{
+
+.section-btn:hover {
     color: #121518;
 }
-.owl-stage{
+
+.owl-stage {
     display: flex;
     justify-content: space-between;
 }
 
-.newsletter{
+.newsletter {
     position: relative;
     max-width: 900px;
     margin: 50px auto -140px auto;
@@ -335,6 +382,7 @@ body{
     border: 2px solid #121518;
     border-radius: 0;
 }
+
 .btn8 {
     position: absolute;
     top: 5px;
@@ -350,7 +398,8 @@ body{
     border: 2px solid #aa9166;
     transition: .3s;
 }
-.btn8:hover{
+
+.btn8:hover {
     background: #aa9166;
     color: #121518;
 }
@@ -362,41 +411,43 @@ body{
     margin-bottom: 45px;
 }
 
-.footer{
+.footer {
     background: #212529;
-
 }
-.lau{
+
+.lau {
     padding-top: 200px;
 }
 
-.footer-about h2{
+.footer-about h2 {
     color: #aa9166;
 }
 
-.footer-about p{
+.footer-about p {
     color: #999999;
 }
 
-.footer-link h2{
+.footer-link h2 {
     color: #aa9166;
 }
-.footer-link a{
+
+.footer-link a {
     text-decoration: none;
 }
 
-.footer-menu{
+.footer-menu {
     background: black;
     background-repeat: no-repeat;
     background-size: cover;
     height: 40px;
 }
 
-.f-menu{
+.f-menu {
     position: relative;
     text-align: center;
     padding: 8px 0;
 }
+
 .f-menu a {
     text-decoration: none;
     color: #999999;
@@ -406,26 +457,28 @@ body{
     border-right: 1px solid rgba(255, 255, 255, .3);
 }
 
-.link a{
-    color: #999999; 
+.link a {
+    color: #999999;
     font-size: 16px;
 }
 
-.link a:hover{
+.link a:hover {
     color: #aa9166;
 }
 
-.cop{
+.cop {
     color: #999999;
 }
-.cop span{
+
+.cop span {
     color: #aa9166;
 }
 
-.footer-contact h2{
+.footer-contact h2 {
     color: #aa9166;
 }
-.footer-contact p{
+
+.footer-contact p {
     color: #999999;
 }
 
@@ -433,7 +486,7 @@ body{
     padding: 30px 15px;
 }
 
-.copy{
+.copy {
     display: flex;
     justify-content: space-between;
 }
