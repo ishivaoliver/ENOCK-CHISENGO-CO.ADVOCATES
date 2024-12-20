@@ -85,6 +85,58 @@ body {
     color: #aa9166;
 }
 
+/* Toggle Button Styles */
+.navbar-toggler {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* Navbar collapse styles for better visibility */
+.collapse.show {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    background: #212529;
+    width: 100%;
+}
+
+/* Navbar items centering on small screens */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Navbar spacing adjustments */
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+
+    .appointment-btn {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}
+
+/* Navbar sticky effect */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
 
 /* Responsive font sizes for brand title */
 
@@ -105,7 +157,7 @@ body {
 }
 
 
-/* Additional media query for Galaxy Z Fold */
+
 
 @media (max-width: 280px) {
     .brand-title {
@@ -120,17 +172,14 @@ body {
     }
 }
 
+/* Carousel Caption Styling */
 .carousel-caption {
-    margin-bottom: 3rem;
-    /* Reduce bottom margin */
+    margin-bottom: 3rem; /* Adjust bottom margin */
     z-index: 2;
-    text-align: center;
-    /* Center-align the caption text */
+    text-align: center; /* Center the caption text */
 }
 
-
-/* Optional: Apply a background overlay for readability */
-
+/* Background Overlay for Readability */
 .carousel-inner::before {
     content: "";
     position: absolute;
@@ -142,47 +191,47 @@ body {
     z-index: 1;
 }
 
+/* Carousel Item Styling */
 .carousel-item {
     background-image: linear-gradient(to bottom, rgba(53, 55, 78, 0.52), rgba(59, 53, 59, 0.73)), url(img/about.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 100vh; /* Fullscreen carousel height */
     position: relative;
-    /* Ensure content stays in place */
 }
 
+/* Feature Section */
 .feature-top {
-    margin-top: 50px;
-    /* Reduce the top margin */
+    margin-top: 0; /* Remove gap */
 }
 
-
-/* Ensure the "Get Free Consultation" button is prominent */
-
-.carousel-caption a {
+/* "Get Free Consultation" Button Styling */
+.carousel-caption a.get-appointment {
+    background-color: #cfc206; /* Yellow background */
+    color: white;
     font-weight: bold;
-    font-size: 1.25rem;
-    /* Adjust button font size for smaller screens */
 }
 
-.feature-item {
-    text-align: center;
-    /* Ensure text is centered inside feature items */
-}
-
+/* Responsive Features */
 @media (max-width: 767px) {
+    /* Carousel Caption Styling */
     .carousel-caption h1 {
         font-size: 2.5rem;
     }
     .carousel-caption p {
         font-size: 1rem;
     }
+
+    /* Adjust Carousel Height */
     .carousel-item {
         height: 75vh;
     }
+
+    /* Feature Item Adjustments */
     .feature-item {
         margin-bottom: 20px;
     }
+
     .feature-item i {
         font-size: 2rem;
     }
@@ -192,10 +241,8 @@ body {
     .feature-item p {
         font-size: 1rem;
     }
-    .carousel-inner {
-        padding-top: 20px;
-    }
-    .carousel-caption a {
+
+    .carousel-caption a.get-appointment {
         font-size: 1.125rem;
         padding: 15px 30px;
     }
@@ -210,6 +257,127 @@ body {
     }
 }
 
+
+/* About Section Styling */
+.about-section {
+    position: relative;
+    /* background-image: url('img/Background\ image\ chisengo.jpg');  */
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+    z-index: 1;
+}
+
+/* Overlay to ensure text readability */
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for text contrast */
+    z-index: -1;
+}
+
+/* Title Styling */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #f8c100; /* Yellow color for the title */
+}
+
+/* Text Styling */
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.about-text .btn {
+    background-color: #f8c100;
+    color: black;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.about-text .btn:hover {
+    background-color: #d9a300;
+}
+
+/* Responsive Styling */
+@media (max-width: 991px) {
+    .about-section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-text .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .about-text .btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section {
+        padding: 40px 0;
+    }
+
+    .about-text .btn {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .about-text p {
+        font-size: 0.8rem;
+    }
+}
+
+
+
 .section-head {
     position: relative;
     width: 100%;
@@ -217,145 +385,505 @@ body {
     margin-bottom: 45px;
 }
 
-.service-icon i {
-    font-size: 60px;
-    color: #aa9166;
-    margin-left: 100px;
+/* Services Section Styling */
+.services {
+    padding: 5rem 0;
+    background-color: #fff;
+    color: #333;
 }
 
-.card-body h5 {
-    padding: 5px;
-    font-size: 30px;
-    font-weight: 600;
-    color: #aa9166;
-    text-align: center;
-}
-
-.card-body p {
-    color: #999999;
-    font-size: 18px;
-    text-align: center;
-}
-
-.card-body a {
-    margin-left: 130px;
-}
-
-.feature-icon i {
-    font-size: 60px;
-    color: #aa9166;
-    margin-left: 93px;
-    height: 290px;
-}
-
-.feature .feature-item p {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.team {
-    margin-top: 150px;
-}
-
-.team-social {
-    position: absolute;
-    width: calc(100% - 60px);
-    height: 50px;
-    bottom: 6rem;
-    left: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #aa9166;
-    gap: 1rem;
-}
-
-.team-social a {
-    font-size: 20px;
-}
-
-.team-social a i:hover {
-    color: #ffffff;
-}
-
-.social-body h5 {
-    padding: 5px;
-    font-size: 30px;
-    font-weight: 600;
-    color: #aa9166;
-    text-align: center;
-}
-
-.social-body p {
-    color: #999999;
-    font-size: 18px;
-    text-align: center;
-}
-
-.accordion-header strong {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    text-align: center;
-    background: #121518;
-    color: #aa9166;
+.services .section-head h2 {
+    font-size: 2.5rem;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
-.card-body a {
-    color: #aa9166;
+.services .section-head p {
+    font-size: 1.2rem;
+    color: #555;
 }
 
-@media screen and (max-width: 1024px) {
-    .carousel-caption {
-        margin-bottom: 0;
+.services .card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.services .card:hover {
+    transform: translateY(-10px);
+}
+
+.services .icon {
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+}
+
+.services .icon i {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.services .card-body h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.services .card-body p {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.services .btn-outline-primary {
+    border: 2px solid #007bff;
+    color: #007bff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.services .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Make Titles Bold */
+.services .card-body h5 {
+    font-weight: 900; /* Make title bold */
+    color: #007bff;   /* Ensure the title has a clear color */
+}
+
+/* Make Paragraph Text Bold */
+.services .card-body p {
+    font-weight: 900; /* Make description text bold */
+    color: #555;      /* Set a visible color for the paragraph text */
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .services .row {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-.header img {
-    width: 90px;
-    height: 90px;
-    margin-right: 1em;
+@media (max-width: 576px) {
+    .services .row {
+        grid-template-columns: 1fr;
+    }
 }
 
-.dea h4 {
-    color: #aa9166;
+
+/* General Section Styling */
+.feature {
+    padding: 60px 0;
+    background-color: #f8f9fa;
 }
 
-.dea p {
-    color: #999999;
+/* Targeting specific section elements */
+.feature .section-head h2 {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.blog {
-    margin-top: 100px;
-}
-
-.meta {
+/* Feature Item Styling */
+.feature .feature-item {
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.owl-stage-outer {
-    width: 360px;
+.feature .feature-item:hover {
+    transform: translateY(-10px); /* Hover Effect */
 }
 
-.owl-image {
-    width: 360px;
+.feature .feature-icon i {
+    font-size: 60px;
+    color: #f39c12; /* Warm yellow color */
+    margin: 0 auto;
+    height: 80px;
 }
 
-.section-btn {
+.feature .feature-item h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature .feature-item p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.feature .feature-img img {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature .feature-img img:hover {
+    transform: scale(1.05); /* Image Hover Effect */
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .feature .feature-img {
+        display: none;
+    }
+
+    .feature .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature .feature-item .col-md-8 {
+        margin-top: 20px;
+    }
+}
+
+
+/* Team section styling  */
+
+.team {
+    /* margin-top: 100px; */
+    padding: 50px 0;
+    background-color: #f8f9fa;
+}
+
+.section-head {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.team-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-card-img {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.team-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.team-card-img:hover img {
+    transform: scale(1.1);
+}
+
+.team-card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.team-card-role {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.team-card-phone {
+    margin-top: 15px;
+}
+
+.btn-call {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #aa9166;
+    color: white;
+    border-radius: 5px;
     text-decoration: none;
-    color: #aa9166;
-    transition: .1s;
-    text-transform: uppercase;
-    font-weight: bolder;
+    transition: all 0.3s ease;
 }
 
-.section-btn:hover {
-    color: #121518;
+.btn-call:hover {
+    background-color: #8c7a4e;
 }
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #aa9166;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .team-card {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* General Styles */
+.topics-section {
+    background-color: #f7f7f7;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+#topics {
+    position: relative;
+    background-image: url('img/carousel-2.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    padding: 50px 0; /* Adjust padding as needed */
+    color: #ffffff; /* Set the text color to white for contrast */
+}
+
+#topics::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adds a dark overlay for better contrast */
+    z-index: -1; /* Ensures the overlay is below the text */
+}
+
+#topics .container {
+    position: relative;
+    z-index: 1; /* Ensures the content is above the overlay */
+}
+
+#topics h2, #topics p {
+    text-align: center;
+    color: #fff; /* White text for better readability */
+}
+
+@media (max-width: 768px) {
+    #topics {
+        background-attachment: scroll; /* Changes behavior on smaller screens for better performance */
+    }
+}
+
+
+
+.section-head {
+    margin-bottom: 30px;
+}
+
+.section-head h2 {
+    font-size: 2.5rem;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.section-head p {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+.accordion-button {
+    background-color: #fff;
+    color: #333;
+    font-weight: 600;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button:hover {
+    background-color: #f1f1f1;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.accordion-button .bg-black {
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+.accordion-body {
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1rem;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.accordion-header {
+    margin-bottom: 0;
+}
+
+.accordion-button span {
+    margin-left: 10px;
+}
+
+.accordion-item .accordion-header {
+    border-bottom: 2px solid #0056b3;
+}
+
+.accordion-body p {
+    line-height: 1.6;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #004085;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Image Styling */
+img.img-fluid {
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#client-portfolio {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+#client-portfolio .section-head h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#client-portfolio .section-head p {
+    color: #777;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.client-card {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.client-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid #f8f9fa;
+}
+
+.client-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.client-info h5 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.client-info p {
+    font-size: 1rem;
+    color: #888;
+}
+
+@media (max-width: 992px) {
+    #client-portfolio .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .client-card {
+        margin-bottom: 30px;
+    }
+}
+
+
 
 .owl-stage {
     display: flex;
@@ -410,6 +938,8 @@ body {
     text-align: center;
     margin-bottom: 45px;
 }
+
+
 
 .footer {
     background: #212529;
